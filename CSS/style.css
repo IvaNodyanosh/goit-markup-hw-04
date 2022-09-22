@@ -250,6 +250,7 @@ header ul {
 .social-list a {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .social-list a:hover,
@@ -265,7 +266,6 @@ header ul {
 }
 
 .social svg {
-    margin: 0 auto;
     fill: var(--white-text);
 }
 
@@ -298,7 +298,7 @@ header ul {
 .hero {
     text-align: center;
     height: 600px;
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url(../img/Img-hero.jpg);
     background-color: #C4C4C4;
@@ -366,10 +366,7 @@ header ul {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-}
-
-.backround-svg svg {
-    margin: 0 auto;
+    justify-content: center;
 }
 
 
@@ -471,8 +468,6 @@ header ul {
 
 .team-social svg {
     fill: #AFB1B8;
-    margin: 0 auto;
-    display: block;
 }
 
 .team-social a {
@@ -481,7 +476,7 @@ header ul {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .team-social a:hover,
@@ -508,7 +503,6 @@ header ul {
 
 .customers-list svg {
     fill: #AFB1B8;
-    margin: 0 auto;
 }
 
 .customers-list {
@@ -525,6 +519,7 @@ header ul {
     align-items: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    justify-content: center;
 }
 
 .customers-list li {
@@ -595,6 +590,7 @@ header ul {
     color: var(--white-text);
     background-color: #2196F3;
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -660,6 +656,7 @@ header ul {
     text-decoration: none;
 }
 
-.content-link:hover {
+.content-link:hover,
+.content-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
