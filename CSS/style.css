@@ -132,7 +132,8 @@ header ul {
 
 
 /* стилізація зв'язку */
-.connection {
+.connection,
+.connection-tel {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -141,21 +142,51 @@ header ul {
     text-decoration: none;
 }
 
-.connection:focus,
-.connection:hover {
+.connection-tel:focus,
+.connection-tel:hover,
+.connection:hover,
+.connection:focus {
     color: var(--accent-color);
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+}
+
+.connection-tel svg {
+    margin-right: 10px;
+    align-items: center;
+    fill: #757575;
+}
+
+.connection-tel {
+    display: flex;
+}
+
+.connection-tel:focus svg,
+.connection-tel:hover svg {
+    fill: var(--accent-color);
 }
 
 .connection-container {
     margin-left: auto;
+    align-items: center;
 }
 
-.connection-container>li:first-of-type {
-    margin-right: 50px;
+.connection-container li:first-child {
+    margin-right: 30px;
 }
 
+.connection svg {
+    margin-right: 10px;
+    fill: #757575;
+}
 
-
+.connection:hover svg,
+.connection:focus svg {
+    fill: var(--accent-color);
+}
 
 
 /* СТИЛЫЗАЦІЯ FOOTER */
@@ -172,9 +203,10 @@ header ul {
 
 .footer {
     background-color: var(--background);
+    display: flex;
 }
 
-.address-offline {
+.footer-address .address-offline {
     color: var(--white-text);
 
 }
@@ -189,9 +221,62 @@ header ul {
     color: var(--accent-color);
 }
 
-.footer-container {
+.footer-address {
     padding: 60px 0px;
+    display: block;
 }
+
+.social-link>ul {
+    display: flex;
+}
+
+.social-link>p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+
+.social-link {
+    margin: 72px 0 100px 70px;
+}
+
+
+.social-list a {
+    display: flex;
+    align-items: center;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+    background-color: #2196F3;
+}
+
+.social {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social svg {
+    margin: 0 auto;
+    fill: var(--white-text);
+}
+
+.social-list li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.container-footer {
+    display: flex;
+}
+
 
 
 
@@ -206,14 +291,18 @@ header ul {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--white-text);
-    background-color: #2F303A;
     display: block;
     margin-bottom: 30px;
 }
 
 .hero {
-    background-color: var(--background);
     text-align: center;
+    height: 600px;
+    width: 1600px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url(../img/Img-hero.jpg);
+    background-color: #C4C4C4;
+    background-size: cover;
 }
 
 .hero-button {
@@ -248,6 +337,8 @@ header ul {
 
 }
 
+
+
 .advantages-description {
     font-size: 14px;
     line-height: 1.7;
@@ -266,6 +357,26 @@ header ul {
 .section-advantages {
     padding-bottom: 0px;
 }
+
+.backround-svg {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.backround-svg svg {
+    margin: 0 auto;
+}
+
+
+
+
+
+
 
 
 /* стилізація секції  */
@@ -320,6 +431,7 @@ header ul {
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .team-profession {
@@ -327,8 +439,9 @@ header ul {
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--tetriary-color);
-    margin-top: 10px;
     text-align: center;
+    margin-bottom: 16px;
+
 }
 
 .team-img {
@@ -339,6 +452,8 @@ header ul {
     background-color: var(--white-text);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    width: calc(100%/4-90px);
+    display: block;
 }
 
 .team-card:not(:nth-child(4n)) {
@@ -347,12 +462,99 @@ header ul {
 
 .team-list {
     display: flex;
-    width: calc(100%/4-90px);
 }
 
 .team-text {
-    padding: 30px 10px;
+    padding: 30px 0;
+    margin: 0 5px;
 }
+
+.team-social svg {
+    fill: #AFB1B8;
+    margin: 0 auto;
+    display: block;
+}
+
+.team-social a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.team-social a:hover,
+.team-social a:focus {
+    background-color: var(--accent-color);
+}
+
+.team-social li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-social a:hover svg,
+.team-social a:focus svg {
+    fill: #FFFFFF;
+}
+
+.team-social {
+    justify-content: center;
+    display: flex;
+}
+
+
+/* стилізація наші клієнти */
+
+.customers-list svg {
+    fill: #AFB1B8;
+    margin: 0 auto;
+}
+
+.customers-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.customers-list a {
+    height: 92px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.customers-list li:not(:nth-child(6n)) {
+    margin-right: 30px;
+}
+
+.customers-section {
+    margin: 94px 0;
+}
+
+.customers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.customers-list a:hover,
+.customers-list a:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.customers-list a:hover svg,
+.customers-list a:focus svg {
+    fill: var(--accent-color);
+}
+
+
 
 
 /* СТИЛІЗАЦІЯ MAIN ДЛЯ СТОРЫНКИ ПОРТФОЛІО  */
@@ -399,6 +601,7 @@ header ul {
 
 
 
+
 /* стилізація секції котенту */
 .content {
     list-style: none;
@@ -411,6 +614,7 @@ header ul {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--primary-color);
 }
 
 .content-description {
@@ -447,4 +651,14 @@ header ul {
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
+    width: 370px;
+}
+
+.content-link {
+    display: block;
+    text-decoration: none;
+}
+
+.content-link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
