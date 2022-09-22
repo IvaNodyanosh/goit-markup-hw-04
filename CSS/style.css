@@ -504,7 +504,7 @@ header ul {
 }
 
 
-/* стилізація наші клієнти */
+/* стилізація постійні клієнти */
 
 .customers-list svg {
     fill: #AFB1B8;
@@ -527,12 +527,13 @@ header ul {
     border-radius: 4px;
 }
 
-.customers-list li:not(:nth-child(6n)) {
-    margin-right: 30px;
+.customers-list li {
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .customers-section {
-    margin: 94px 0;
+    margin: 94px -15px;
 }
 
 .customers-title {
